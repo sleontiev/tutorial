@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+form {
+    text-align: left;
+}
+div {
+    padding: 45px 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+header {
+    text-align: left;
+    color: #d8d8d8;
+    padding: 25px;
+    background: #333333;
+}
+footer {
+    text-align: center;
+    color: #d8d8d8;
+    padding: 50px;
+    background: #333333;
+}
+aside {
+    background-color: #474747;
+}
+h1 {
+    color: #292929;
+    font-size: 25px;
+}
+p {
+    color: #292929;
+    font-size: 15px;
+}
+table {
+    border-radius: 15%;
+    border: 1px solid #333333;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 15px;
+}
