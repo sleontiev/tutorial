@@ -14,28 +14,31 @@
         <p>Lorem, <i>ipsum</i> dolor <ins>sit</ins> <del>amet</del> <b>consectetur</b> adipisicing <em>elit</em>. <a href='#'>Omnis</a> quasi officiis magni perspiciatis amet, molestias atque? Assumenda quos ipsa, laudantium officiis unde quaerat, sint impedit praesentium dolorum, nulla soluta expedita!</p>
         <hr>
         <form>
-            <label for="fname">Введите имя:</label><br>
-            <input type="text" name="" id="fname" placeholder="Введите имя"><br><br>
-            <label for="fmail">Введите email:</label><br>
-            <input type="text" name="" id="fmail" placeholder="Введите email"><br><br>
-            <label for="date_birth">Выберите дату рождения:</label><br>
-            <input type="date" name="calendar" id="date_birth"><br><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Мужской</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Женский</label><br><br>
-            <textarea placeholder='Расскажите о себе' name="txtarea" id="" cols="50" rows="10"></textarea><br><br>
-            <label for="skills">Выберите навыки</label>
-            <select name="" id="skills" multiple>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JavaScript">JavaScript</option>
-            </select><br><br>
-            <label for="myfile">Звгрузите резюме:</label>
-            <input type="file" id="myfile" name="myfile"><br><br>
-            <label for="agree">Согласение на обработку персональных данных</label>
-            <input type="checkbox" name="" id="agree"><br><br>
-            <input type="submit" value="Отправить">
+            <fieldset>
+                <legend><h2>Персональная информация</h2></legend>
+                <label for="fname">Введите имя:</label><br>
+                <input type="text" name="" id="fname" placeholder="Введите имя"><br><br>
+                <label for="fmail">Введите email:</label><br>
+                <input type="text" name="" id="fmail" placeholder="Введите email"><br><br>
+                <label for="date_birth">Выберите дату рождения:</label><br>
+                <input type="date" name="calendar" id="date_birth"><br><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Мужской</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Женский</label><br><br>
+                <textarea placeholder='Расскажите о себе' name="txtarea" id="" cols="50" rows="10"></textarea><br><br>
+                <label for="skills">Выберите навыки</label>
+                <select name="" id="skills" multiple>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select><br><br>
+                <label for="myfile">Звгрузите резюме:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <label for="agree">Согласение на обработку персональных данных</label>
+                <input type="checkbox" name="" id="agree"><br><br>
+                <input type="submit" value="Отправить">
+            </fieldset>
         </form>
         <br><br>
         <table>
