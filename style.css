@@ -36,10 +36,10 @@ p {
     font-size: 15px;
 }
 table {
-    border-radius: 15%;
-    border: 1px solid #333333;
+    border: 2px solid #333333;
     border-collapse: collapse;
 }
 td, th {
+    border: 1px solid #333333;
     padding: 15px;
 }
