@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
+    <base target="_blank">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="description" content="Frontend Tutorial">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,43 +17,61 @@
         <form>
             <fieldset>
                 <legend><h2>Персональная информация</h2></legend>
-                <label for="fname">Введите имя:</label><br>
-                <input type="text" name="" id="fname" placeholder="Введите имя"><br><br>
-                <label for="fmail">Введите email:</label><br>
-                <input type="text" name="" id="fmail" placeholder="Введите email"><br><br>
+                <label for="fname">Введите имя:</label><br/><br/>
+                <input type="text" name="" id="fname" placeholder="Введите имя"><br/><br/>
+                <label for="fmail">Введите email:</label><br/><br/>
+                <input type="text" name="" id="fmail" placeholder="Введите email"><br/><br/>
                 <label for="date_birth">Выберите дату рождения:</label><br>
-                <input type="date" name="calendar" id="date_birth"><br><br>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Мужской</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Женский</label><br><br>
+                <input type="date" name="calendar" id="date_birth"><br/><br/>
+                <input type="radio" id="male" name="gender" value="male"/>
+                <label for="male">Мужской</label><br/>
+                <input type="radio" id="female" name="gender" value="female>
+                <label for="female">Женский</label><br/><br/>
                 <textarea placeholder='Расскажите о себе' name="txtarea" id="" cols="50" rows="10"></textarea><br><br>
                 <label for="skills">Выберите навыки</label>
                 <select name="" id="skills" multiple>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
                     <option value="JavaScript">JavaScript</option>
-                </select><br><br>
+                </select><br/><br/>
                 <label for="myfile">Звгрузите резюме:</label>
-                <input type="file" id="myfile" name="myfile"><br><br>
+                <input type="file" id="myfile" name="myfile"><br/><br/>
                 <label for="agree">Согласение на обработку персональных данных</label>
-                <input type="checkbox" name="" id="agree"><br><br>
+                <input type="checkbox" name="" id="agree"><br/><br/>
                 <input type="submit" value="Отправить">
             </fieldset>
         </form>
-        <br><br>
+    <br/><br/>
         <table>
-            <tr>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Возраст</th>
-            </tr>
-            <tr>
-                <td>Sergey</td>
-                <td>Leontiev</td>
-                <td>23</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Возраст</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sergey</td>
+                    <td>Leontiev</td>
+                    <td>23</td>
+                </tr>
+            </tbody>
         </table>
+        <h3>Пример неупорядоченного списка:</h3>
+        <br/>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Node.JS</li>
+        </ul>
+        <h3>Пример упорядоченного списка:</h3>
+        <ol>
+            <li>Angular</li>
+            <li>Vue.JS</li>
+            <li>React.JS</li>
+        </ol>
     </div>
     <footer><span>Подвал страницы</span></footer>
 </body>
