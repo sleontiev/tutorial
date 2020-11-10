@@ -9,70 +9,94 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><img src="img/logo.png"></header>
-    <div>
-        <h1>Заголовок страницы</h1>
-        <p>Lorem, <i>ipsum</i> dolor <ins>sit</ins> <del>amet</del> <b>consectetur</b> adipisicing <em>elit</em>. <a href='#'>Omnis</a> quasi officiis magni perspiciatis amet, molestias atque? Assumenda quos ipsa, laudantium officiis unde quaerat, sint impedit praesentium dolorum, nulla soluta expedita!</p>
-        <hr>
-        <form>
-            <fieldset>
-                <legend><h2>Персональная информация</h2></legend>
-                <label for="fname">Введите имя:</label><br/><br/>
-                <input type="text" name="" id="fname" placeholder="Введите имя"><br/><br/>
-                <label for="fmail">Введите email:</label><br/><br/>
-                <input type="text" name="" id="fmail" placeholder="Введите email"><br/><br/>
-                <label for="date_birth">Выберите дату рождения:</label><br>
-                <input type="date" name="calendar" id="date_birth"><br/><br/>
-                <input type="radio" id="male" name="gender" value="male"/>
-                <label for="male">Мужской</label><br/>
-                <input type="radio" id="female" name="gender" value="female>
-                <label for="female">Женский</label><br/><br/>
-                <textarea placeholder='Расскажите о себе' name="txtarea" id="" cols="50" rows="10"></textarea><br><br>
-                <label for="skills">Выберите навыки</label>
-                <select name="" id="skills" multiple>
+    <header class="headerContainer">
+            <ul class="headerContainer__menu">
+                <li><a class='headerContainer__menu-links' href="#">Главная</a></li>
+                <li><a class='headerContainer__menu-links' href="#">Контакты</a></li>
+                <li><a class='headerContainer__menu-links' href="#">О себе</a></li>
+            </ul>
+    </header>
+    <div class="container">
+        <h1 class="container__title">Personal</h1>
+        <p class="container__preview">Lorem, <i>ipsum</i> dolor <ins>sit</ins> <del>amet</del> <b>consectetur</b> adipisicing <em>elit</em>. <a href='#'>Omnis</a> quasi officiis magni perspiciatis amet, molestias atque? Assumenda quos ipsa, laudantium officiis unde quaerat, sint impedit praesentium dolorum, nulla soluta expedita!</p>
+        <form class="container__form containerTabs">
+            <fieldset class="container__form-fieldset">
+                <legend><h2 class="container__form-title">Персональная информация</h2></legend>
+                <input class='container__form-input' type="text" name="" id="fname" placeholder="Введите имя">
+                <input class='container__form-input' type="text" name="" id="fmail" placeholder="Введите email">
+                <textarea class = 'container__form-textArea' placeholder='Расскажите о себе' name="txtarea" id=""></textarea>
+                <span class="change-message">Введите дату рождения:</span>
+                <input type="date" class="container__form-changeDate" name="calendar" id="date_birth">
+                <span class="change-message">Выберите пол:</span>
+                <div class="container__form-changeGender">
+                    <input type="radio" id="male" name="gender" value="male"/>
+                    <label for="male">Мужской</label>
+                    <br/>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label>
+                </div>
+                <span class="change-message">Выберите навыки:</span>
+                <select class="container__form-skills" name="" id="skills" multiple>
                     <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
                     <option value="JavaScript">JavaScript</option>
-                </select><br/><br/>
-                <label for="myfile">Звгрузите резюме:</label>
-                <input type="file" id="myfile" name="myfile"><br/><br/>
-                <label for="agree">Согласение на обработку персональных данных</label>
-                <input type="checkbox" name="" id="agree"><br/><br/>
-                <input type="submit" value="Отправить">
+                </select>
+                <span class="change-message">Загрузите резюме:</span>
+                <input class="container__form-loadResume" type="file" id="myfile" name="myfile">
+                <label for="agree">Согласение на обработку персональных данных:</label>
+                <input type="checkbox" name="" id="agree">
+                <input class = 'container__form-button' type="submit" value="Отправить">
             </fieldset>
         </form>
-    <br/><br/>
-        <table>
-            <thead>
-                <tr>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Возраст</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sergey</td>
-                    <td>Leontiev</td>
-                    <td>23</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Пример неупорядоченного списка:</h3>
-        <br/>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Node.JS</li>
-        </ul>
-        <h3>Пример упорядоченного списка:</h3>
-        <ol>
-            <li>Angular</li>
-            <li>Vue.JS</li>
-            <li>React.JS</li>
-        </ol>
+        <div class="container__table containerTabs">
+            <table class="container__table-personal">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Возраст</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sergey</td>
+                        <td>Leontiev</td>
+                        <td>23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container__list containerTabs">
+            <div class="ul-list">
+                <h3>Упорядоченный список</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.JS</li>
+                </ul>
+            </div>
+            <div class="ol-list">
+                <h3>Неупорядоченный список</h3>
+                <ol>
+                    <li>Angular</li>
+                    <li>Vue.JS</li>
+                    <li>React.JS</li>
+                </ol>
+            </div>
+        </div>
     </div>
-    <footer><span>Подвал страницы</span></footer>
+    <div class="footerContainer">
+        <div class="socialLinks">
+            <a href="#"><img src="img/vk.png" alt=""></a>
+            <a href="#"><img src="img/youtube.png" alt=""></a>
+            <a href="#"><img src="img/fb.png" alt=""></a>
+        </div>
+    </div>
+    <div class="additional-info">
+        <a href="tel:+1234567">8-(888)-888-88-88</a>
+    </div>
 </body>
 </html>
