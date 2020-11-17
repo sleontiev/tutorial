@@ -37,7 +37,6 @@ body, html {
     margin: 25px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /*grid-auto-rows: 200px;*/
 }
 
 .box1 {
@@ -68,13 +67,6 @@ body, html {
     grid-column-start: 2;
 }
 
-.container {
-    width: 1280px;
-    padding: 0.1px 0;
-    margin: 35px auto;
-    text-align: center;
-}
-
 .news-list {
     display: flex;
     flex-direction: column;
@@ -86,11 +78,6 @@ body, html {
 
 .news-props {
     color: #696969;
-}
-
-.container__title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
 }
 
 .containerTabs {
