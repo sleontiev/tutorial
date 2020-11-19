@@ -5,80 +5,37 @@ body, html {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
-    background-color: #f5f5ff;
+    background-color: #ffffff;
 }
 
-.headerContainer {
-    width: 100%;
-    height: 44px;
-    text-align: center;
-    color: #d5d5d5;
-    background-color: #363636;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-.headerContainer__menu {
-    margin: 0;
-    padding: 10px 0;
-    list-style: none;
-}
-
-.headerContainer__menu li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.headerContainer__menu-links {
-    color: #f5f5f7;
-    text-decoration: none;
-}
+/*Сетка*/
 
 .wrapper {
     width: 1280px;
-    margin: 25px auto;
+    margin: 15px auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    grid-template-columns: 2fr 1fr;
 }
 
-.box1 {
-    padding: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+.block-left {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 100px 1fr;
 }
 
-.box2 {
-    padding: 10px;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-row-end: 5;
+.block-left_title {
+    grid-column: 1/3;
+    text-align: center;
 }
 
-.box3 {
-    padding: 10px;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    grid-column-start: 1;
+.block-left_news {
+    display: grid;
+    grid-gap: 40px;
 }
 
-.box4 {
-    width: 593px;
-    padding: 10px;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    grid-column-start: 2;
-}
 
-.news-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.news-item {
-    margin-bottom: 20px;
-}
-
-.news-props {
-    color: #696969;
-}
+/*Сетка*/
 
 .containerTabs {
     text-align: center;
@@ -86,6 +43,15 @@ body, html {
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
     padding: 25px;
+    background: #f5f5ff;
+}
+
+.news-item {
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    background: #f5f5ff;
 }
 
 .container__form-fieldset {
@@ -202,6 +168,13 @@ body, html {
     margin: 5px;
 }
 
+.footerContainer {
+    text-align: center;
+    color: #d8d8d8;
+    padding: 50px;
+    background: #333333;
+}
+
 .socialLinks {
     width: 30%;
     margin: 0 auto;
@@ -211,14 +184,6 @@ body, html {
 
 .socialLinks img {
     height: 30px;
-}
-
-
-.footerContainer {
-    text-align: center;
-    color: #d8d8d8;
-    padding: 50px;
-    background: #333333;
 }
 
 .additional-info {
@@ -235,65 +200,50 @@ body, html {
 }
 
 @media (max-width: 1280px) {
+
+    /*Сетка*/
+
     .wrapper {
         width: 100%;
-    }
-    .box1 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-    }
-    .box2 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    .box3 {
-        grid-row-start: 3;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-    .box4 {
-        width: auto;
-        grid-row-start: 4;
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-    .containerTabs {
-        margin: 0 auto;
-        width: 80%;
+        grid-template-columns: 1fr;
     }
 
-    .news-list {
-        width: 85%;
-        overflow: scroll;
-        margin: auto;
-        flex-direction: row;
+    .block-right {
+        grid-row: 1;
+        position: sticky;
+        top: 0;
+    }
+
+    .block-left_news {
+        grid-column: 1/3;
+        grid-template-columns: repeat(3, 100px);
         justify-content: space-between;
+        grid-gap: 20;
+        overflow: scroll;
+        width: 75%;
+        margin: auto;
     }
 
-    .news-item {
-        width: 150px;
-        margin: 5px 15px;
+    .block-left_main {
+        grid-column: 1/3;
+    }
+
+    /*Сетка*/
+
+    .containerTabs {
+        width: 75%;
+        margin: auto;
     }
 
     .container__list {
         flex-direction: row;
     }
+
     .ol-list h3, .ul-list h3{
         text-align: center;
         font-size: 1rem;
     }
-    .container {
-        width: 100%;
-    }
-    .container__preview {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+
     .container__form-fieldset {
         display: contents;
     }
@@ -303,8 +253,8 @@ body, html {
     .container__table {
         overflow: scroll;
     }
+
     .socialLinks{
         width: 70%;
     }
 }
-

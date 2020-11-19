@@ -9,77 +9,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="headerContainer">
-            <ul class="headerContainer__menu">
-                <li><a class='headerContainer__menu-links' href="#">Главная</a></li>
-                <li><a class='headerContainer__menu-links' href="#">Контакты</a></li>
-                <li><a class='headerContainer__menu-links' href="#">О себе</a></li>
-            </ul>
-    </header>
-    <div class="wrapper">
-        <div class="box1">
-            <div class="container__table containerTabs">
-                <table class="container__table-personal">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Имя</th>
-                        <th>Фамилия</th>
-                        <th>Возраст</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Sergey</td>
-                        <td>Leontiev</td>
-                        <td>23</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="container__list containerTabs">
-                <div class="ul-list">
-                    <h3>Упорядоченный список</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Node.JS</li>
-                    </ul>
-                </div>
-                <div class="ol-list">
-                    <h3>Неупорядоченный список</h3>
-                    <ol>
-                        <li>Angular</li>
-                        <li>Vue.JS</li>
-                        <li>React.JS</li>
-                    </ol>
+<div class="wrapper">
+    <div class="block-left">
+        <div class="block-left_title">
+            <div class="containerTabs">
+                <h1 class='wrapper-title'>Personal</h1>
+                <div class="container__table">
+                    <table class="container__table-personal">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Возраст</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sergey</td>
+                            <td>Leontiev</td>
+                            <td>23</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="box3">
-            <div class="news-list">
-                <div class="containerTabs news-item">
-                    <h3 class="news-title">Новость 1</h3>
-                    <p class="news-preview">Содержание новости</p>
-                    <p class="news-props">/Теги</p>
-                </div>
-                <div class="containerTabs news-item">
-                    <h3 class="news-title">Новость 2</h3>
-                    <p class="news-preview">Содержание новости</p>
-                    <p class="news-props">/Теги</p>
-                </div>
-                <div class="containerTabs news-item">
-                    <h3 class="news-title">Новость 3</h3>
-                    <p class="news-preview">Содержание новости</p>
-                    <p class="news-props">/Теги</p>
-                </div>
+        <div class="block-left_news">
+            <div class="news-item">
+                <h3 class="news-title">Новость 1</h3>
+                <p class="news-preview">Содержание новости</p>
+            </div>
+            <div class="news-item">
+                <h3 class="news-title">Новость 2</h3>
+                <p class="news-preview">Содержание новости</p>
+            </div>
+            <div class="news-item">
+                <h3 class="news-title">Новость 3</h3>
+                <p class="news-preview">Содержание новости</p>
             </div>
         </div>
-        <div class="box4">
+        <div class="block-left_main">
             <form class="container__form containerTabs">
                 <fieldset class="container__form-fieldset">
                     <legend><h2 class="container__form-title">Персональная информация</h2></legend>
@@ -111,15 +82,37 @@
             </form>
         </div>
     </div>
-    <div class="footerContainer">
-        <div class="socialLinks">
-            <a href="#"><img src="img/vk.png" alt=""></a>
-            <a href="#"><img src="img/youtube.png" alt=""></a>
-            <a href="#"><img src="img/fb.png" alt=""></a>
+    <div class="block-right">
+        <div class="container__list containerTabs">
+            <div class="ul-list">
+                <h3>Упорядоченный список</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.JS</li>
+                </ul>
+            </div>
+            <div class="ol-list">
+                <h3>Неупорядоченный список</h3>
+                <ol>
+                    <li>Angular</li>
+                    <li>Vue.JS</li>
+                    <li>React.JS</li>
+                </ol>
+            </div>
         </div>
     </div>
-    <div class="additional-info">
-        <a href="tel:+1234567">8-(888)-888-88-88</a>
+</div>
+<div class="footerContainer">
+    <div class="socialLinks">
+        <a href="#"><img src="img/vk.png" alt=""></a>
+        <a href="#"><img src="img/youtube.png" alt=""></a>
+        <a href="#"><img src="img/fb.png" alt=""></a>
     </div>
+</div>
+<div class="additional-info">
+    <a href="tel:+1234567">8-(888)-888-88-88</a>
+</div>
 </body>
 </html>
