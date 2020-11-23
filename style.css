@@ -11,6 +11,7 @@ body, html {
 /*Сетка*/
 
 .wrapper {
+    transition: 5s;
     width: 1280px;
     margin: 15px auto;
     display: grid;
@@ -127,6 +128,7 @@ body, html {
     border-radius: 25px;
     padding: 15px 35px;
     background: none;
+    outline: none;
     cursor: pointer;
 }
 
@@ -199,6 +201,52 @@ body, html {
     color: #d8d8d8;
 }
 
+.popup {
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.table-more-popup {
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.table-more-popup .table-more-popup-content {
+    margin: 40px auto 0px auto;
+    width: 40%;
+    height: 40%;
+    padding: 60px;
+    font-size: 22px;
+    background-color: #f5f5ff;
+    border-radius: 20px;
+    box-shadow: 0 0 45px rgba(0, 0, 0);
+}
+.close-table {
+    text-align: right;
+}
+.popup .popup-content {
+    margin: 40px auto 0px auto;
+    width: 200px;
+    height: 200px;
+    padding: 60px;
+    font-size: 22px;
+    background-color: #f5f5ff;
+    border-radius: 20px;
+    box-shadow: 0 0 45px rgba(0, 0, 0);
+}
+
 @media (max-width: 1280px) {
 
     /*Сетка*/
@@ -206,6 +254,7 @@ body, html {
     .wrapper {
         width: 100%;
         grid-template-columns: 1fr;
+        transition: 5s;
     }
 
     .block-right {
@@ -218,7 +267,7 @@ body, html {
         grid-column: 1/3;
         grid-template-columns: repeat(3, 100px);
         justify-content: space-between;
-        grid-gap: 20;
+        grid-gap: 20px;
         overflow: scroll;
         width: 75%;
         margin: auto;

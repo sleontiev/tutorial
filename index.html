@@ -36,6 +36,75 @@
                 </div>
             </div>
         </div>
+        <div class="table-more-popup">
+            <div class="table-more-popup-content">
+                <div class="close-table">
+                    <img src="img/close.png" alt="Close">
+                </div>
+                        <table class="container__table-personal">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя</th>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Год рождения</th>
+                                <th>Возраст</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Sergey</td>
+                                <td>Sergeevich</td>
+                                <td>Leontiev</td>
+                                <td>1997</td>
+                                <td>23</td>
+                            </tr>
+                            </tbody>
+                        </table>
+            </div>
+        </div>
         <div class="block-left_news">
             <div class="news-item">
                 <h3 class="news-title">Новость 1</h3>
@@ -77,7 +146,13 @@
                     <input class="container__form-loadResume" type="file" id="myfile" name="myfile">
                     <label for="agree">Согласение на обработку персональных данных:</label>
                     <input type="checkbox" name="" id="agree">
-                    <input class = 'container__form-button' type="submit" value="Отправить">
+                    <button class = 'container__form-button'>Отправить</button>
+                    <div class="popup">
+                        <div class="popup-content">
+                            Данные формы отправлены на сервер
+                            <button class="clsPopup container__form-button">Закрыть</button>
+                        </div>
+                    </div>
                 </fieldset>
             </form>
         </div>
@@ -114,5 +189,6 @@
 <div class="additional-info">
     <a href="tel:+1234567">8-(888)-888-88-88</a>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
