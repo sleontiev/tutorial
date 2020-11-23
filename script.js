@@ -46,7 +46,8 @@ list.addEventListener('mousemove', () => {
     try {
         list.style.background = color[(Math.floor(Math.random() * color.length))];
     } catch (e) {
-        console.log(e);
+        const errorText = document.querySelector('.error');
+        errorText.textContent = 'Либо массив пуст, либо отсутствует';
     }
 });
 
