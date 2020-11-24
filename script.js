@@ -27,10 +27,12 @@ table.addEventListener('mouseover', (e) => {
 });
 closeTable.addEventListener('click', () => tableMoreInfo.style.display = 'none');
 
-const input = document.querySelectorAll('.container__form-input');
+const input = document.querySelectorAll('.container__form-input[id=fname]');
+const userName = document.querySelector('.name');
 for(let item of [...input]) {
-    item.onfocus = function() {
-        console.log('Тест');
+    item.onchange = function() {
+        userName.textContent = item.value;
+        item.value = '';
     }
 }
 
