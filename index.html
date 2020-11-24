@@ -117,6 +117,7 @@
                 <fieldset class="container__form-fieldset">
                     <legend><h2 class="container__form-title">Персональная информация</h2></legend>
                     <input class='container__form-input' type="text" name="" id="fname" placeholder="Введите имя">
+                    <span class="errorText">Введите своё имя в поле</span>
                     <input class='container__form-input' type="text" name="" id="fsurname" placeholder="Введите фамилию">
                     <textarea class = 'container__form-textArea' placeholder='Расскажите о себе' name="txtarea" id=""></textarea>
                     <span class="change-message">Введите дату рождения:</span>
@@ -139,7 +140,7 @@
                     <input class="container__form-loadResume" type="file" id="myfile" name="myfile">
                     <label for="agree">Согласение на обработку персональных данных:</label>
                     <input type="checkbox" name="" id="agree">
-                    <button class = 'container__form-button'>Отправить</button>
+                    <input type="button" class = 'container__form-button' value="Отправить">
                     <div class="popup">
                         <div class="popup-content">
                             Данные формы отправлены на сервер

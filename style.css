@@ -46,6 +46,10 @@ body, html {
     padding: 25px;
     background: #f5f5ff;
 }
+.errorText {
+    color: #ff0000;
+    display: none;
+}
 
 .news-item {
     text-align: center;
