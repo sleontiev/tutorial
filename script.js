@@ -27,22 +27,6 @@ table.addEventListener('mouseover', (e) => {
 });
 closeTable.addEventListener('click', () => tableMoreInfo.style.display = 'none');
 
-const input = document.querySelectorAll('.container__form-input[id=fname]');
-const errorTxt = document.querySelector('.errorText');
-const userName = document.querySelector('.name');
-for(let item of [...input]) {
-    item.onblur = function() {
-      errorTxt.style.display = 'block';
-    };
-    item.onfocus = function() {
-        errorTxt.style.display = 'none';
-    }
-    item.onchange = function() {
-        userName.textContent = item.value;
-        item.value = '';
-    };
-}
-
 
 const color = [
     '#808080',
