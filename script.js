@@ -78,8 +78,7 @@ class User {
         }
     }
 
-    setName () {
-        let name = prompt('Введите Ваше имя', 'default');
+    setName (name = 'User Name') {
         this.name = name;
     }
 
@@ -114,7 +113,7 @@ const subuser = new Subuser(
     ],
     'Apple',
     );
-console.log(subuser);
+subuser.getName();
 
 const user = new User(
     'Sergey',
