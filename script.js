@@ -149,7 +149,55 @@ const skillArr = [];
 for(let item of skill) {
     skillArr.push(item);
 }
+
 console.log(skillArr);
+
+// 6 итерация
+
+title.addEventListener('click', () => alert('Сейчас изменится текст')); //alert
+
+console.log(location.href); //Получение текущего урла
+
+console.log(history.state);//получение текущего элемента истории
+
+const toTable = document.querySelector('.toTable');
+toTable.addEventListener('click', (e) => {
+    e.preventDefault();
+    history.pushState(null, null, 'table.html'); // Добавление элемента в историю
+    history.go(0);
+});
+
+document.cookie = 'senla=my-cookie; max-age=60'; // Установка куки
+
+
+// const myNumber = 42;
+// localStorage.setItem('number', myNumber);
+// console.log(localStorage.getItem('number'));
+// localStorage.clear();
+
+const obj = {
+    name: 'Alex',
+    age: 20,
+};
+
+localStorage.setItem('person', JSON.stringify(obj));
+
+const raw = localStorage.getItem('person');
+const person = JSON.parse(raw);
+person.name = 'Sergey';
+
+// console.log(person);
+
+window.addEventListener('storage', event => {
+    console.log(event);
+});
+
+
+
+
+
+
+
 
 
 
