@@ -93,6 +93,9 @@ class Subuser extends User{
         super(name, age, isFrontendDeveloper, skills, additionalSkills);
         this.workPlace = workPlace;
     }
+    genNameSubuser() {
+        return super.getName();
+    }
 }
 const subuser = new Subuser(
     'Ivan',
@@ -169,16 +172,18 @@ toTable.addEventListener('click', (e) => {
 
 document.cookie = 'senla=my-cookie; max-age=60'; // Установка куки
 
-
-// const myNumber = 42;
-// localStorage.setItem('number', myNumber);
-// console.log(localStorage.getItem('number'));
-// localStorage.clear();
+sessionStorage.setItem('test', JSON.stringify({
+    name: 'Test',
+    age: 20,
+}));
 
 const obj = {
     name: 'Alex',
     age: 20,
 };
+
+
+debugger;
 
 localStorage.setItem('person', JSON.stringify(obj));
 
