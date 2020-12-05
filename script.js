@@ -187,11 +187,11 @@ debugger;
 
 localStorage.setItem('person', JSON.stringify(obj));
 
-const raw = localStorage.getItem('person');
-const person = JSON.parse(raw);
+const personString = localStorage.getItem('person');
+const person = JSON.parse(personString);
 person.name = 'Sergey';
 
-// console.log(person);
+console.log(person);
 
 window.addEventListener('storage', event => {
     console.log(event);
