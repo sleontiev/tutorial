@@ -221,8 +221,8 @@ getGitRepo('SerejaTrapecija')
 async function getGitRepoAsync(login) {
     try {
         const response = await fetch(`https://api.github.com/users/${login}/repos`)
-            .then(res => res.json());
-        return response;
+        const data = await response.json()
+        return data;
     } catch (err) {
         Promise.reject(err);
     }
