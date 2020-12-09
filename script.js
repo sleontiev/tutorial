@@ -222,14 +222,12 @@ async function getGitRepoAsync(login) {
     try {
         const response = await fetch(`https://api.github.com/users/${login}/repos`)
         const data = await response.json()
-        return data;
+        data.forEach(item => console.log('Проект:', item.name));
     } catch (err) {
-        Promise.reject(err);
+        console.error('Ошибка');
     }
 }
 getGitRepoAsync('SerejaTrapecija')
-    .then(proj => proj.forEach(item => console.log('Название проекта:', item.name)))
-    .catch(err => console.log('Ошибка'));
 
 // ****** Получение данных через ASYNC / AWAIT ****** //
 
