@@ -202,6 +202,16 @@
 
 // ****** Получение данных через Promise ****** //
 
+const getGitRepoBtn = document.querySelector('.getrepo');
+const form = document.querySelector('.container__form');
+const gitList = document.createElement('ul');
+function drawGitList(gitProject) {
+    const listItem = document.createElement('li');
+    listItem.textContent = gitProject;
+    gitList.appendChild(listItem);
+    return gitList;
+}
+
 function getGitRepo(login) {
     return new Promise((resolve, reject) => {
             fetch(`https://api.github.com/users/${login}/repos`)
@@ -210,13 +220,17 @@ function getGitRepo(login) {
                 .catch(err => reject(err))
     })
 }
-getGitRepo('SerejaTrapecija')
-    .then(proj => proj.forEach(item => console.log('Название проекта:', item.name)))
-    .catch(err => console.log('Какая-то ошибка'));
 
-// ****** Получение данных через Promise ****** //
-
-// ****** Получение данных через ASYNC / AWAIT ****** //
+getGitRepoBtn.addEventListener('click', () => {
+    const gitRepoLogin = document.querySelector('.gitrepo').value;
+    getGitRepo(gitRepoLogin)
+        .then(proj => proj.forEach(item => form.appendChild(drawGitList(item.name))))
+        .catch(err => console.log('Какая-то ошибка'));
+});
+//
+// // ****** Получение данных через Promise ****** //
+//
+// // ****** Получение данных через ASYNC / AWAIT ****** //
 
 async function getGitRepoAsync(login) {
     try {
