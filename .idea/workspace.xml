@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d253ff7-1613-4bf9-bf4a-33c6d1535110" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-app/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +137,7 @@
       <workItem from="1605122066260" duration="3374000" />
       <workItem from="1605271752003" duration="40177000" />
       <workItem from="1606240282234" duration="78837000" />
-      <workItem from="1607886154060" duration="2066000" />
+      <workItem from="1607886154060" duration="2266000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил обработчики blur и focus">
       <created>1606247758273</created>
@@ -155,12 +150,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149958000" />
+    <option name="totallyTimeSpent" value="150158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1792" height="1042" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16685714" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16685714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -173,7 +168,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3287234" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38877118" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38877118" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32838982" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
