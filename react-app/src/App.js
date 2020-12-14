@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import './components/form';
-import Form from "./components/form";
-import Table from './components/table';
-import News from './components/news';
-import Footer from './components/footer/footer';
+import './components/form/form';
+import Table from "./components/table/table";
+import Form from "./components/form/form";
+import News from "./components/news/news";
+import Footer from "./components/footer/footer";
 
 class App extends Component{
   state = {
@@ -21,7 +21,21 @@ class App extends Component{
         title: 'Новость 2',
         content: 'Содержание новости 345',
       },
-    ]
+    ],
+    title: 'Personal',
+  };
+  changeTitle = () => {
+      this.setState((state) => {
+        if(state.title === 'Personal') {
+          return {
+            title: 'Персональная информация',
+          }
+        } else {
+          return {
+            title: 'Personal',
+          }
+        }
+    })
   };
   render() {
     return (
@@ -30,7 +44,7 @@ class App extends Component{
             <div className="block-left">
               <div className="block-left_title">
                 <div className="containerTabs">
-                  <h1 className='wrapper-title'>Personal</h1>
+                  <h1 onClick={this.changeTitle} className='wrapper-title'>{this.state.title}</h1>
                   <div className="container__table">
                     <Table/>
                   </div>
