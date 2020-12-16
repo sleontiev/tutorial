@@ -216,6 +216,28 @@ body, html {
   display: none;
 }
 
+.changeNewsTitle {
+  width:100%;
+  min-height:100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.changeNewsTitle-content {
+  margin: 40px auto 0px auto;
+  width: 200px;
+  height: 200px;
+  padding: 60px;
+  font-size: 22px;
+  background-color: #f5f5ff;
+  border-radius: 20px;
+  box-shadow: 0 0 45px rgba(0, 0, 0);
+}
+
 .table-more-popup {
   width:100%;
   min-height:100%;

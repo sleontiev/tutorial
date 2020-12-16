@@ -24,6 +24,32 @@ class App extends Component{
     ],
     title: 'Personal',
   };
+  openForm = () => {
+    const changeTitleForm = document.querySelector('.changeNewsTitle');
+    changeTitleForm.style.display = 'block';
+  };
+  changeNews1Title = () => {
+    const changeTitleForm = document.querySelector('.changeNewsTitle');
+    const newsTitleNew = document.querySelector('.changeTitleNew').value;
+    this.setState(state => {
+      if(newsTitleNew !== '') {
+        return state.news[0].title = newsTitleNew;
+      } else {
+        return state.news[0].title = this.state.news[0].title;
+      }
+    });
+    changeTitleForm.style.display = 'none';
+  }
+  changeNews2Title = () => {
+    this.setState(state => {
+      return state.news[1].title = 'News 2';
+    })
+  };
+  changeNews3Title = () => {
+    this.setState(state => {
+      return state.news[2].title = 'News 3';
+    })
+  };
   changeTitle = () => {
       this.setState((state) => {
         if(state.title === 'Personal') {
@@ -59,9 +85,27 @@ class App extends Component{
                 </div>
               </div>
               <div className="block-left_news">
-                <News name={this.state.news[0].title} content={this.state.news[0].content}/>
-                <News name={this.state.news[1].title} content={this.state.news[1].content}/>
-                <News name={this.state.news[2].title} content={this.state.news[2].content}/>
+                <News
+                    name={this.state.news[0].title}
+                    content={this.state.news[0].content}
+                    onChangeNewsTitle = {this.openForm}
+                />
+                <div className="changeNewsTitle">
+                  <div className="changeNewsTitle-content">
+                    <input type="text" className='changeTitleNew'/>
+                    <button onClick={this.changeNews1Title} className='changeTitle'>Изменить</button>
+                  </div>
+                </div>
+                <News
+                    name={this.state.news[1].title}
+                    content={this.state.news[1].content}
+                    onChangeNewsTitle = {this.changeNews2Title}
+                />
+                <News
+                    name={this.state.news[2].title}
+                    content={this.state.news[2].content}
+                    onChangeNewsTitle = {this.changeNews3Title}
+                />
               </div>
               <div className="block-left_main">
                 <Form/>
