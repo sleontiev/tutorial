@@ -1,3 +1,6 @@
+import React from 'react';
+import './Form.css';
+
 export default () => {
     const showPopup = () => {
         const popup = document.querySelector('.popup');
@@ -9,8 +12,8 @@ export default () => {
         popup.style.display = 'none';
     };
     const getRepo = (login) =>{
-           return fetch(`https://api.github.com/users/${login}/repos`)
-               .then(response => response.json())
+        return fetch(`https://api.github.com/users/${login}/repos`)
+            .then(response => response.json())
     };
     const drawGitList = (gitProject) => {
         const listItem = document.createElement('li');
@@ -71,5 +74,4 @@ export default () => {
             </fieldset>
         </form>
     );
-
 }
