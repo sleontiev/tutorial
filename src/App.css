@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 15px auto;
+}
+
+.containerTabs {
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    padding: 25px;
+    background: #f5f5ff;
+    margin: 25px auto;
+}

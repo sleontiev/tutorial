@@ -1,0 +1,29 @@
+.TenIteration {
+    text-align: center;
+}
+
+.TenIteration h1{
+    color: #363636;
+    font-size: 60px;
+}
+
+.TenIteration button {
+    margin: 15px;
+    border: 1px solid #333333;
+    border-radius: 25px;
+    padding: 15px 35px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.TenIteration button:hover {
+    background-color: #363636;
+    color: #d5d5d5;
+    transition: 0.5s;
+}
+
+.TenIteration_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}

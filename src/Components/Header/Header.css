@@ -1,0 +1,29 @@
+.headerContainer {
+    background: #333333;
+    box-shadow: 0 2px 5px #ccc;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+.headerContainer__list {
+    margin: 0;
+    padding: 20px 0;
+}
+.headerContainer__item {
+    display: inline;
+    list-style: none;
+    margin: 0 15px;
+}
+.headerContainer__link {
+    text-decoration: none;
+    color: #ccc;
+}
+.active-item{
+    color: #f5f5ff;
+    font-size: 16px;
+}
+.headerContainer__link:hover {
+    color: #f5f5ff;
+    font-size: 16px;
+    transition: .5s;
+}

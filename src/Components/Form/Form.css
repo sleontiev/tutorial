@@ -1,0 +1,124 @@
+.containerTabs {
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    padding: 25px;
+    background: #f5f5ff;
+}
+.container__form-fieldset {
+    border-radius: 20px;
+    border: 1px solid #333333;
+}
+
+.container__form-title {
+    margin: 0;
+}
+
+.container__form-input {
+    width: 200px;
+    height: 35px;
+    display: block;
+    margin: 10px auto;
+    padding: 0 15px;
+    border-radius: 25px;
+    border: 1px solid #333333;
+    outline: none;
+    background: none;
+}
+
+.container__form-textArea {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 15px;
+    width: 200px;
+    height: 150px;
+    border-radius: 25px;
+    border: 1px solid #333333;
+    background: none;
+    outline: none;
+    resize: none;
+}
+
+.container__form-changeDate {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    width: 200px;
+    border: 1px solid #333333;
+    border-radius: 25px;
+    background: none;
+    outline: none;
+}
+
+.container__form-changeGender{
+    display: block;
+}
+
+.container__form-skills {
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100px;
+    background: none;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.container__form-loadResume {
+    display: block;
+    margin: 10px auto;
+}
+
+.container__form-button {
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #333333;
+    border-radius: 25px;
+    padding: 15px 35px;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container__form-button:hover {
+    background-color: #363636;
+    color: #d5d5d5;
+    transition: 0.5s;
+}
+
+.popup {
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popup .popup-content {
+    margin: 40px auto 0px auto;
+    width: 200px;
+    height: 200px;
+    padding: 60px;
+    font-size: 22px;
+    background-color: #f5f5ff;
+    border-radius: 20px;
+    box-shadow: 0 0 45px rgba(0, 0, 0);
+}
+@media (max-width: 1280px) {
+    .containerTabs {
+        width: 75%;
+        margin: auto;
+    }
+    .container__form-fieldset {
+        display: contents;
+    }
+    .container__form-input, .container__form-textArea, .container__form-changeDate {
+        width: 80%;
+    }
+}
