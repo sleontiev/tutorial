@@ -1,0 +1,26 @@
+.ElevenIteration {
+    max-width: 250px;
+    text-align: center;
+    font-size: 20px;
+    padding: 25px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px #333333;
+    border-radius: 40px;
+}
+
+.Buttons {
+    width: 250px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.Buttons button {
+    font-size: 40px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px auto;
+    border: 1px solid #333333;
+    border-radius: 40px;
+    outline: none;
+    background: none;
+}

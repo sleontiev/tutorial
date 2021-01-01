@@ -7,7 +7,9 @@ import Main from './Components/Main/Main';
 import News from './Components/News/News';
 import ExampleList from './Components/ExampleList/ExampleList';
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
-import NineIteration from "./Components/TenIteration/TenIteration";
+import ElevenIterationClass from './Components/ElevenIteration/ElevenIterationClass';
+import ElevenIterationFunc from './Components/ElevenIteration/ElevenIterationFunc';
+import TenIteration from "./Components/TenIteration/TenIteration";
 
 class App extends Component {
   constructor(props) {
@@ -65,9 +67,17 @@ class App extends Component {
                   <Route path='/list' render={ExampleList}/>
                   <Route path='/teniteration' render={() => {
                       return (
-                          <NineIteration
-                            title = '10 итерация'
-                          />
+                          <TenIteration/>
+                      )
+                  }}/>
+                  <Route path='/eleveniterationclass' render={() => {
+                      return (
+                          <ElevenIterationClass />
+                      )
+                  }}/>
+                  <Route path='/eleveniterationfunc' render={() => {
+                      return (
+                          <ElevenIterationFunc />
                       )
                   }}/>
                   <Route render={() => <h1>404 Page Not Found</h1>}/>
