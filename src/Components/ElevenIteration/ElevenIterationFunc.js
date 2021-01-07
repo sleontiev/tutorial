@@ -40,7 +40,6 @@ export default () => {
     return (
         <div>
             <div className={classes.ElevenIteration}>
-                <h2>Таймер функционального компонента</h2>
                 <p>{ timer }</p>
             </div>
             <div className={classes.Buttons}>

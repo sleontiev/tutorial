@@ -52,7 +52,6 @@ class ElevenIterationClass extends Component {
         return (
             <div>
                 <div className={classes.ElevenIteration}>
-                    <h2>Таймер классового компонента</h2>
                     <p>{ this.state.timer }</p>
                 </div>
                 <div className={classes.Buttons}>

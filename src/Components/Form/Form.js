@@ -13,7 +13,7 @@ export default () => {
     };
     const getRepo = (login) =>{
         return fetch(`https://api.github.com/users/${login}/repos`)
-            .then(response => response.json())
+            .then(response => response.json() )
     };
     const drawGitList = (gitProject) => {
         const listItem = document.createElement('li');
