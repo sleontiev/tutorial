@@ -16,7 +16,7 @@ class ElevenIterationClass extends Component {
         }
    }
 
-   componentDidUpdate(prevProps, prevState, snapshot) {
+   componentDidUpdate() {
         localStorage.setItem('timer', this.state.timer)
    }
 

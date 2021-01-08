@@ -1,7 +1,7 @@
 import classes from './Post.module.css';
 
 
-const Post = (props:any) => {
+const Post: (props: any) => JSX.Element = (props:any) => {
     return (
         <div className={classes.Post}>
             <p>{ props.post.title }</p>

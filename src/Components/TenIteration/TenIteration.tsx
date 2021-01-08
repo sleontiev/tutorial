@@ -26,8 +26,8 @@ function useInput(initialValue:string) {
 }
 
 export default () => {
-    const [type, setType] = useState('todos');
-    const [data, setData] = useState([]);
+    const [type, setType] = useState<string>('todos');
+    const [data, setData] = useState<never[]>([]);
 
     const input = useInput('');
 
@@ -35,7 +35,7 @@ export default () => {
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${type}/`)
-            .then(response => response.json() as Promise<any>)
+            .then(response => response.json() as Promise<never[]>)
             .then(json => setData(json))
     }, [type]);
 

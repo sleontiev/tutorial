@@ -4,7 +4,7 @@ import vkLogo from './image/vk.png';
 import youtubeLogo from './image/youtube.png';
 import fbLogo from './image/fb.png';
 
-const Footer: React.FC = () => {
+const Footer: () => JSX.Element = () => {
     return (
         <React.Fragment>
             <div className="footerContainer">

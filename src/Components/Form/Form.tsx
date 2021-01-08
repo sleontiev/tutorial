@@ -1,21 +1,23 @@
 import React from 'react';
 import './Form.css';
 
+
+
 export default () => {
     const showPopup = () => {
-        const popup = document.querySelector('.popup');
+        const popup = document.querySelector('.popup') as HTMLElement;
         popup.style.display = 'block';
     };
-    const closePopup = (e) => {
-        const popup = document.querySelector('.popup');
+    const closePopup = (e:any) => {
+        const popup = document.querySelector('.popup') as HTMLElement;
         e.preventDefault();
         popup.style.display = 'none';
     };
-    const getRepo = (login) =>{
+    const getRepo = (login: string) =>{
         return fetch(`https://api.github.com/users/${login}/repos`)
-            .then(response => response.json() )
+            .then(response => response.json() as Promise<any> )
     };
-    const drawGitList = (gitProject) => {
+    const drawGitList = (gitProject:string) => {
         const listItem = document.createElement('li');
         const gitList = document.createElement('ul');
         listItem.textContent = gitProject;
@@ -23,10 +25,10 @@ export default () => {
         return gitList;
     };
     const getRepoGit = () => {
-        const gitRepoLogin = document.querySelector('.gitrepo').value;
-        const form = document.querySelector('.container__form');
+        const gitRepoLogin = (document.querySelector('.gitrepo') as HTMLInputElement).value;
+        const form = document.querySelector('.container__form') as HTMLElement;
         getRepo(gitRepoLogin)
-            .then(projects => projects.forEach(item => form.appendChild(drawGitList(item.name))))
+            .then(projects => projects.forEach((item:any) => form.appendChild(drawGitList(item.name))))
     };
     return (
         <form className="container__form containerTabs">

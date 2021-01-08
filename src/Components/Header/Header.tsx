@@ -2,7 +2,8 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import './Header.css';
 
-export default() => (
+const Header: () => JSX.Element = () => {
+    return (
         <div className='headerContainer'>
             <ul className='headerContainer__list'>
                 <li className='headerContainer__item'><NavLink className='headerContainer__link' to='/' exact activeClassName={'active-item'}>Main</NavLink></li>
@@ -15,3 +16,6 @@ export default() => (
             </ul>
         </div>
     )
+}
+
+export default Header

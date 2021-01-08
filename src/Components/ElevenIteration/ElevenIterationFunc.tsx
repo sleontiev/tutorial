@@ -1,31 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classes from "./ElevenIterationClass.module.css";
 
-function setDefaultTimer () {
-    const localTimer = localStorage.getItem('timer');
+function setDefaultTimer ():number {
+    const localTimer: string | null = localStorage.getItem('timer');
     return localTimer ? +localTimer : 0;
 }
 
 export default () => {
-    const [timer, setTimer] = useState(setDefaultTimer());
-    const [countTimer, setCountTimer] = useState(true);
-    const timerIdRef = useRef(null);
+    const [timer, setTimer] = useState<number>(setDefaultTimer());
+    const [countTimer, setCountTimer] = useState<boolean>(true);
+    const timerIdRef:React.MutableRefObject<any> = useRef(null);
 
-    const startTimer = () => {
+    const startTimer: () => void = () => {
         setCountTimer(false)
     }
 
-    const stopTimer = () => {
+    const stopTimer: () => void = () => {
         setCountTimer(true);
     }
 
-    const resetTimer = () => {
+    const resetTimer: () => void = () => {
         setTimer(0)
         setCountTimer(true);
     }
 
     useEffect(() => {
-        localStorage.setItem('timer', timer)
+        localStorage.setItem('timer', String(timer))
     }, [timer])
 
     useEffect(() => {
