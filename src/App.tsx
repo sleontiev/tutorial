@@ -10,20 +10,23 @@ import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import ElevenIterationClass from './Components/ElevenIteration/ElevenIterationClass';
 import ElevenIterationFunc from './Components/ElevenIteration/ElevenIterationFunc';
 import TenIteration from "./Components/TenIteration/TenIteration";
+import LastIteration from './Components/LastIteration/LastIteration'
 
 type StateType = {
+    clicked: boolean,
     news: Array<object>,
 }
 
 class App extends Component<{}, StateType> {
     state = {
-      news: [
-          {title: 'Новость 1', content: 'Содержание новости 1'},
-          {title: 'Новость 2', content: 'Содержание новости 1'},
-          {title: 'Новость 3', content: 'Содержание новости 1'},
-          {title: 'Новость 4', content: 'Содержание новости 1'},
-          {title: 'Новость 5', content: 'Содержание новости 1'},
-      ]
+        clicked: false,
+        news: [
+            {title: 'Новость 1', content: 'Содержание новости 1'},
+            {title: 'Новость 2', content: 'Содержание новости 1'},
+            {title: 'Новость 3', content: 'Содержание новости 1'},
+            {title: 'Новость 4', content: 'Содержание новости 1'},
+            {title: 'Новость 5', content: 'Содержание новости 1'},
+        ]
     }
 
   changeTitle = (index:number, e: React.FocusEvent<HTMLInputElement>) => {
@@ -41,6 +44,9 @@ class App extends Component<{}, StateType> {
     news.splice(index, 1);
     this.setState({news});
   };
+  changeClicked = () => {
+      this.setState({clicked: !this.state.clicked})
+  }
   render() {
     return(
         <React.Fragment>
@@ -81,6 +87,14 @@ class App extends Component<{}, StateType> {
                           <ElevenIterationFunc />
                       )
                   }}/>
+                    <Route pats='/lastiteration' render={() => {
+                        return (
+                            <LastIteration
+                                changeClicked = {this.changeClicked}
+                                clickedValue = {this.state.clicked}
+                            />
+                        )
+                    }}/>
                   <Route render={() => <h1>404 Page Not Found</h1>}/>
               </Switch>
           </div>

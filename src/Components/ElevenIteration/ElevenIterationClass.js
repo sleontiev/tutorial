@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './ElevenIterationClass.module.css';
 
-class ElevenIterationClass extends Component {
+class ElevenIterationClass extends Component{
    state = {
        timer: 0,
        countTimer: true,
