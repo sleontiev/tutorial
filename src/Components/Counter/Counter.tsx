@@ -15,11 +15,11 @@ const Counter: (props:any) => JSX.Element= (props:any) => {
             width: '200px',
             margin: '0 auto',
         }}>
-            <p>{ value }</p>
-            <button onClick={upValue}>UP</button>
-            <button onClick={downValue}>DOWN</button>
-            <hr/>
-            <Counter2/>
+            <Counter2
+                value = {value}
+                upValue={upValue}
+                downValue={downValue}
+            />
         </div>
     )
 }
