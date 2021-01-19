@@ -1,6 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, FC, ChangeEvent} from 'react';
 import './News.css';
-export default (props:any) => {
+
+type typeProps = {
+    name?: string,
+    content?: string,
+    changeTitle?: ((e: React.FocusEvent<HTMLInputElement>) => void)|undefined,
+    changeContent?: ((e: React.FocusEvent<HTMLTextAreaElement>) => void)|undefined,
+    onDeleteNews?: ((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined,
+}
+
+const News: FC<typeProps> = (props) => {
     const [changeModTitle, setChangeModTitle] = useState(false);
     const [changeModContent, setChangeModContent] = useState(false);
     const [title, setTitle] = useState(props.name);
@@ -33,3 +42,5 @@ export default (props:any) => {
         </div>
     )
 }
+
+export default News

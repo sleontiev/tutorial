@@ -1,33 +1,35 @@
 import React from 'react';
 import './Form.css';
 
+interface UserRepo {
+    login: string
+}
 
-
-export default () => {
+const Form: () => JSX.Element = () => {
     const showPopup = () => {
         const popup = document.querySelector('.popup') as HTMLElement;
         popup.style.display = 'block';
     };
-    const closePopup = (e:any) => {
+    const closePopup = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         const popup = document.querySelector('.popup') as HTMLElement;
         e.preventDefault();
         popup.style.display = 'none';
     };
-    const getRepo = (login: string) =>{
+    const getRepo = (login: string):Promise<any> =>{
         return fetch(`https://api.github.com/users/${login}/repos`)
-            .then(response => response.json() as Promise<any> )
+            .then(response => response.json())
     };
-    const drawGitList = (gitProject:string) => {
+    const drawGitList = (gitProject:string): HTMLUListElement => {
         const listItem = document.createElement('li');
         const gitList = document.createElement('ul');
         listItem.textContent = gitProject;
         gitList.appendChild(listItem);
         return gitList;
     };
-    const getRepoGit = () => {
+    const getRepoGit = ():Promise<UserRepo[]> => {
         const gitRepoLogin = (document.querySelector('.gitrepo') as HTMLInputElement).value;
         const form = document.querySelector('.container__form') as HTMLElement;
-        getRepo(gitRepoLogin)
+        return getRepo(gitRepoLogin)
             .then(projects => projects.forEach((item:any) => form.appendChild(drawGitList(item.name))))
     };
     return (
@@ -77,3 +79,5 @@ export default () => {
         </form>
     );
 }
+
+export default Form

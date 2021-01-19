@@ -36,16 +36,19 @@ class App extends Component<{}, StateType> {
       const news = [...this.state.news];
       news[index].title = e.target.value;
       this.setState({news});
+      return
   };
-  changeContent = (index:number, e:FocusEvent<HTMLInputElement>) => {
+  changeContent = (index:number, e:FocusEvent<HTMLTextAreaElement>) => {
       const news = [...this.state.news];
       news[index].content = e.target.value;
       this.setState({news});
+      return
   };
   deleteNews = (index:number) => {
     const news = [...this.state.news];
     news.splice(index, 1);
     this.setState({news});
+    return
   };
   render() {
     return(

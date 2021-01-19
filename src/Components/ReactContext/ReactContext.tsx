@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { FC } from 'react'
 import Counter from '../Counter/Counter'
 
-export const ClickedContext = React.createContext(false)
+type TypeProps = {
+    changeClicked?: ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void),
+    clickedValue?: boolean | any,
+}
 
-const LastIteration: (props:any) => JSX.Element = (props:any) => {
-    console.log(props)
+export const ClickedContext = React.createContext(null)
+
+const LastIteration: FC<TypeProps> = (props) => {
     return (
         <>
         <button onClick={props.changeClicked}>Click</button>
         <ClickedContext.Provider value = {props.clickedValue}>
-            <Counter 
-                clickedValueProps = {props.clickedValue}
-            />
+            <Counter/>
         </ClickedContext.Provider>
         </>
     )
